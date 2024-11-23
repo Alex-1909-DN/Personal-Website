@@ -1,0 +1,291 @@
+/* 
+Name: Quoc Phong Tran
+Course: CST8285
+Lab Section: 321
+Professor: Hala Own
+File: style.css
+Date Created: October 27, 2024
+Description: This CSS file provides styles for a responsive web design project encompassing four pages: Home, Resume, Projects, and Contact. It includes layouts for various sections such as header, navigation, main content, and footer. Media queries are utilized to adapt the design for different screen sizes, enhancing user experience across devices.
+*/
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+}
+/* Paragraph styles */
+p {
+  font-size: 16px;
+}
+body p strong {
+  font-size: 16px;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  background-color: #c62828;
+  margin-bottom: 10px;
+  border: 2px solid #b71c1c;
+}
+
+h1 {
+  color: #ffffff;
+  padding: 10px;
+  font-size: 3rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 15px;
+}
+
+/* Navigation styles */
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Link styles */
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  text-decoration: none;
+}
+a:active {
+  color: blue;
+}
+
+nav a:visited {
+  color: orange;
+}
+/* Main content styles */
+main {
+  margin: 10px;
+}
+h2 {
+  font-size: 1.5rem;
+}
+
+/* Footer styles */
+footer {
+  position: relative;
+}
+
+footer p {
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  bottom: 0;
+  background-color: #c62828;
+  color: #fff;
+  margin-top: 10px;
+  border: 2px solid #b71c1c;
+}
+
+/* Style for Home Page */
+.home-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.home-main p {
+  margin: 10px 0;
+}
+.home-main img {
+  border: 1px solid #c62828;
+  width: 15%;
+}
+
+/* Style for Resume Page */
+.resume-main hr {
+  border: none;
+  height: 2px;
+  background-color: #b71c1c;
+  width: 95%;
+  margin: 20px 0;
+}
+.resume-main ul {
+  margin-left: 40px;
+}
+
+.resume-main div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.resume-section-info {
+  text-align: center;
+}
+
+.resume-section-skills p {
+  margin: 10px 0;
+}
+
+/* Style for Contact Page */
+
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #bcaaa4;
+  border-radius: 5px;
+  background-color: #f7e7ce;
+}
+
+fieldset {
+  border: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+/* Input container styles */
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+/* Input and textarea styles */
+.input input,
+textarea {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ffabab;
+  border-radius: 5px;
+}
+/* Button container styles */
+.contact-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+/* Button styles */
+.contact-buttons input {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #003366;
+  color: #fff;
+}
+
+/* Style for Projects Page */
+.projects-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+.projects-main img {
+  width: 60%;
+}
+.project {
+  flex: 1;
+  border: 2px solid #003366;
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+.project strong {
+  font-size: 16px;
+}
+.project p {
+  margin: 15px 0;
+}
+.description {
+  text-align: left;
+}
+
+/* Media queries */
+
+/* Styles for screens up to 1024px */
+@media (max-width: 1024px) {
+  body {
+    line-height: 1.5;
+  }
+  body p {
+    font-size: 15px;
+    padding: 15px;
+  }
+  body p strong {
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  .projects-main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px;
+  }
+  label {
+    font-size: 15px;
+  }
+}
+/* Styles for screens up to 600px */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+
+  header nav {
+    flex-direction: column;
+    gap: 0;
+  }
+  header nav a {
+    padding: 5px;
+  }
+  .projects-main {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  body {
+    line-height: 1.4;
+  }
+  body p,
+  li {
+    font-size: 12px;
+    padding: 5px;
+    margin: 0;
+  }
+  body p strong {
+    font-size: 12px;
+  }
+  label {
+    font-size: 12px;
+  }
+}

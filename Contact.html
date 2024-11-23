@@ -1,0 +1,81 @@
+<!-- 
+Name: Quoc Phong Tran
+Course: CST8285
+Lab section: 321
+Professor: Hala Own
+File: Contact.html
+Date Created: October 27, 2024
+Description: Contact page with a form for users to submit their name, email, subject, and message. Includes navigation links to other pages and uses external CSS for styling.-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact form for users to input their name, email, subject, and message."
+    />
+    <meta name="keywords" content="contact, form, email, subject" />
+    <meta name="author" content="Quoc Phong Tran" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <header>
+      <h1>Contact</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="Projects.html">Projects</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <main class="contact-main">
+      <form action="process.php" method="get">
+        <fieldset>
+          <div class="input">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="input">
+            <label for="email">Email Address:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="xxx@yyy.zzz"
+            />
+          </div>
+          <div class="input">
+            <label for="subject">Subject:</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              minlength="10"
+              maxlength="60"
+            />
+          </div>
+          <div>
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              cols="30"
+              minlength="10"
+              maxlength="100"
+            ></textarea>
+          </div>
+          <div class="contact-buttons">
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+          </div>
+        </fieldset>
+      </form>
+    </main>
+    <footer>
+      <p>Quoc Phong Tran, 2024 copyright</p>
+    </footer>
+  </body>
+</html>
